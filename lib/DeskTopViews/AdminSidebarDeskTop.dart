@@ -14,7 +14,9 @@ import 'package:tappuu_dashboard/DeskTopViews/TermsAndConditionsViewDeskTop/Term
 import 'package:tappuu_dashboard/DeskTopViews/UserWalletViewDeskTop/UserWalletViewDeskTop.dart';
 import 'package:tappuu_dashboard/DeskTopViews/UsersViewsDeskTop/UsersViewDeskTop.dart';
 import 'package:tappuu_dashboard/DeskTopViews/WalletTransactionsViewDeskTop/WalletTransactionsViewDeskTop.dart';
+import 'package:tappuu_dashboard/DeskTopViews/WatermarkViewDeskTop/WatermarkViewDeskTop.dart';
 import 'package:tappuu_dashboard/controllers/ThemeController.dart';
+
 
 import '../core/constant/app_text_styles.dart';
 import '../core/constant/appcolors.dart';
@@ -379,6 +381,17 @@ class _AdminSidebarDeskTopState extends State<AdminSidebarDeskTop> {
                     onTap: () {
                       _navigateToScreen(FontManagementViewDeskTop(), 21);
                     },
+
+                  ),_buildMenuItem(
+                    icon: Icons.branding_watermark,
+                    title: 'العلامة المائية',
+                    index: 21,
+                    isActive: _selectedIndex == 24,
+                    isDarkMode: isDarkMode,
+                    onTap: () {
+                      _navigateToScreen(WatermarkViewDeskTop(), 24);
+                    },
+                    
                   ),
                       _buildSectionTitle("المدونة", isDarkMode),
                 _buildMenuItem(
